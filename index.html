@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MILANO MB</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|IBM+Plex+Sans:600" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <style>
+        .site-header-nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: transparent;
+            transition: background-color 0.3s ease-in-out;
+            z-index: 9999;
+        }
+
+        .site-header-nav .scrolled {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .site-header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            padding: 0 10px;
+        }
+
+        .site-header-logo {
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .site-header-menu-icon {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .site-header-menu-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: #333;
+        }
+
+        .site-navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(255, 255, 255, 0.95);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 9998;
+        }
+
+        .site-navigation.active {
+            transform: translateX(0);
+        }
+
+        .site-navigation-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100%;
+            padding: 40px;
+        }
+
+        .site-navigation-link {
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .site-navigation-link:hover {
+            color: #ff4500;
+        }
+
+        @media (max-width: 768px) {
+            .site-header {
+                height: 50px;
+                padding: 0 4px;
+            }
+
+            .site-header-logo {
+                font-size: 20px;
+            }
+        }
+            a.active-link{
+	             color: #535FD7;
+	             text-decoration: underline;
+	             text-decoration-color: #535FD7;
+	             font-weight: 800;
+        }
+    .pets-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    .pet-image {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 16px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .pet-button {
+      display: inline-block;
+      font-size: 20px;
+      letter-spacing: -0.1px;
+      font-weight: 600;
+      color: #fff !important;
+      background-color: #535FD7;
+      border: none;
+      border-radius: 2px;
+      padding: 16px 32px;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.25s ease;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .pet-button:hover {
+      background: #5763d8;
+    }
+    
+    .rotate-image {
+	    height: 200px;
+      animation: rotateAnimation 3s linear infinite;
+    }
+
+    @keyframes rotateAnimation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(15deg);
+      }
+    }
+  </style>
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+            <div class="container">
+	<header class="site-header-nav">
+                <div class="site-header-inner">
+                    <a href="#" class="site-header-logo">MILANO MB</a>
+                    <div class="site-header-menu-icon" id="menuIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M3 18h18v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="site-header"></header>
+
+        <div class="site-navigation" id="navigation">
+            <div class="site-navigation-inner">
+                <a href="index.html"
+                class="site-navigation-link
+                active-link">Home</a>
+                <a href="pets.html"
+                class="site-navigation-link">Puppies</a>
+                <a href="about.html" class="site-navigation-link">About</a>
+                <a href="contact.html"
+                class="site-navigation-link">Contact
+                us</a>
+                <a class="button button-primary"
+								href="pets.html">Explore Our Puppies</a>
+            </div>
+        </div>
+
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-inner">
+						<div class="hero-copy">
+							<br>
+							<br>
+							<br>
+	                        <h1 class="hero-title mt-0">Welcome to MILANO MB</h1>
+	                        <p class="hero-paragraph">Discover the perfect companion for your family. We offer high-quality Labrador Retriever puppies with exceptional temperaments and excellent bloodlines.</p>
+	                        <div class="hero-cta">
+								<a class="button button-primary"
+								href="pets.html">Explore Our Puppies</a>
+								<div class="lights-toggle">
+									<input id="lights-toggle" type="checkbox" name="lights-toggle" class="switch">
+									<label for="lights-toggle" class="text-xs"><span>Turn me <span class="label-text">dark</span></span></label>
+								</div>
+							</div>
+							
+						</div>
+            </section>
+
+            <section class="features section">
+                <div class="container">
+					<div class="features-inner section-inner has-bottom-divider">
+						<div class="features-header text-center">
+							<div class="container-sm">
+								<h2 class="section-title mt-0">Our Services</h2>
+	                            <p class="section-paragraph">We offer a range of services to ensure you have a seamless experience when bringing home your new Labrador Retriever puppy:</p>
+								<div class="features-image">
+									<img class="features-illustration asset-dark" src="dist/images/features-illustration-dark.svg" alt="Feature illustration">
+									<img class="features-box asset-dark" src="dist/images/features-box-dark.svg" alt="Feature box">
+									<img class="features-illustration asset-dark" src="dist/images/features-illustration-top-dark.svg" alt="Feature illustration top">
+									<img class="features-illustration asset-light" src="dist/images/features-illustration-light.svg" alt="Feature illustration">
+									<img class="features-box asset-light" src="dist/images/features-box-light.svg" alt="Feature box">
+									<img class="features-illustration asset-light" src="dist/images/features-illustration-top-light.svg" alt="Feature illustration top">
+								</div>
+							</div>
+                        </div>
+                        <div class="features-wrap">
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<img class="asset-light" src="dist/images/feature-01-light.svg" alt="Feature 01">
+										<img class="asset-dark" src="dist/images/feature-01-dark.svg" alt="Feature 01">
+                                    </div>
+																	<div class="feature-content">
+                                    	<h3 class="feature-title mt-0">Health Guarantee</h3>
+                                    	<p class="text-sm mb-0">Our puppies come with a comprehensive health guarantee to ensure their well-being. We prioritize their health and provide necessary vaccinations and vet check-ups.</p>
+									</div>
+								</div>
+                            </div>
+							<div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<img class="asset-light" src="dist/images/feature-02-light.svg" alt="Feature 02">
+										<img class="asset-dark" src="dist/images/feature-02-dark.svg" alt="Feature 02">
+                                    </div>
+									<div class="feature-content">
+                                    	<h3 class="feature-title mt-0">Personalized Support</h3>
+                                    	<p class="text-sm mb-0">We provide personalized support and guidance throughout the process, from choosing the right puppy to training tips and ongoing care advice.</p>
+									</div>
+								</div>
+                            </div>
+							<div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<img class="asset-light" src="dist/images/feature-03-light.svg" alt="Feature 03">
+										<img class="asset-dark" src="dist/images/feature-03-dark.svg" alt="Feature 03">
+                                    </div>
+									<div class="feature-content">
+                                    	<h3 class="feature-title mt-0">Exceptional Bloodlines</h3>
+                                    	<p class="text-sm mb-0">Our Labrador Retriever puppies come from exceptional bloodlines, ensuring their quality and maintaining the breed's characteristics and temperament.</p>
+									</div>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+			<section class="cta section">
+                <div class="container-sm">
+                    <div class="cta-inner section-inner">
+                        <div class="cta-header text-center">
+                            <h2 class="section-title mt-0">Bring Home Your Perfect Companion</h2>
+                            <p
+                            class="section-paragraph">Explore
+                            our available Labrador
+                            Retriever puppies and
+                            find your new family
+                            member today.</p>
+                            <br>
+                            <section class="pets-preview">
+  <div class="container">
+    <div class="pets-container">
+      <img class="pet-image" src="dist/images/pet1.png" alt="Pet 1">
+      <img class="pet-image" src="dist/images/pet2.png" alt="Pet 2">
+      <img class="pet-image" src="dist/images/pet3.png" alt="Pet 3">
+      <img class="pet-image" src="dist/images/pet4.png" alt="Pet 4">
+      <img class="pet-image" src="dist/images/pet5.png" alt="Pet 5">
+      <img class="pet-image" src="dist/images/pet6.png" alt="Pet 6">
+      <img class="pet-image" src="dist/images/pet7.png" alt="Pet 7">
+      <img class="pet-image" src="dist/images/pet8.png" alt="Pet 8">
+      <img class="pet-image" src="dist/images/pet9.png" alt="Pet 9">
+      <img class="pet-image" src="dist/images/pet10.png" alt="Pet 10">
+      <img class="pet-image" src="dist/images/pet11.png" alt="Pet 11">
+      <img class="pet-image" src="dist/images/pet12.png" alt="Pet 12">
+      <img class="pet-image" src="dist/images/pet13.png" alt="Pet 13">
+      <img class="pet-image" src="dist/images/pet14.png" alt="Pet 14">
+      <img class="pet-image" src="dist/images/pet15.png" alt="Pet 15">
+    </div>
+  </div>
+</section>
+							<div class="cta-cta">
+								<a class="button button-primary"
+								href="pets.html">Browse Puppies</a>
+							</div>
+					    </div>
+                    </div>
+                </div>
+            </section>
+            
+						</div>
+						<center>
+						<h1>About us</h1>
+						<p>At Milano MB, we are passionate about connecting families with their perfect furry companions. We specialize in Labrador Retriever puppies, known for their friendly and gentle nature. With a focus on quality breeding, we carefully select our parent dogs based on health, temperament, and exceptional bloodlines. Our puppies are raised in a loving and nurturing environment, receiving individual care and socialization to ensure they grow up to be well-adjusted and happy. We take pride in providing high-quality puppies with excellent temperaments to bring joy and companionship to families. Contact us today to start your journey towards finding your new four-legged family member."
+</p>
+</center>
+            <center>
+            <h1>Contact us</h1>
+            <p>Contact us today to learn more
+            about our puppies or to schedule a
+            visit. Our dedicated team at Milano MB
+            is ready to assist you in finding the
+            perfect furry companion for your
+            family. You can reach us by phone at
+            +1 (123) 456-7890 during our business
+            hours from Monday to Friday, 9 AM to 5
+            PM. If you prefer email, you can send
+            us a message at info@milanomb.com and
+            we'll get back to you as soon as
+            possible. We look forward to hearing
+            from you and helping you find your new
+            best friend!</p></center>
+        </main>
+  
+   <footer class="site-footer has-top-divider">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+	<a href="index.html"
+	class="site-header-logo">MILANO MB</a>
+                    </div>
+                    <ul class="footer-links list-reset">
+                        <li>
+                            <a
+                            href="index.html"
+                            class="active-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="pets.html">Puppies</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact us</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-social-links list-reset">
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Facebook</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" fill="#FFF"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Twitter</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-2.4.7-5.1 1.1-7.8 1.1v-.7c1.2.7 2.6 1.2 4.1 1.5-1.5-.9-2.5-2.5-2.5-4.3 0-.9.2-1.7.6-2.4 2.3 2.8 5.7 4.6 9.6 4.8-.1-.5-.1-1-.1-1.5 0-3.7 3-6.7 6.7-6.7 1.9 0 3.6.8 4.8 2.1 1.5-.3 2.8-1.1 3.6-2.1-.4 1.5-1.5 2.7-2.8 3.5 1.3-.1 2.5-.5 3.6-1-.8 1.3-1.9 2.5-3.2 3.3z" fill="#FFF"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Instagram</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.8 0H3.2C1.4 0 0 1.4 0 3.2v9.6C0 14.6 1.4 16 3.2 16h9.6c1.8 0 3.2-1.4 3.2-3.2V3.2C16 1.4 14.6 0 12.8 0zm2.8 12.8c0 1.5-1.2 2.8-2.8 2.8H3.2c-1.5 0-2.8-1.2-2.8-2.8V3.2C0 1.7 1.2 0 2.8 0h9.6c1.5 0 2.8 1.2 2.8 2.8v9.6z" fill="#FFF"/>
+                                    <path d="M8 4.9A3.1 3.1 0 1 0 8 11a3.1 3.1 0 0 0 0-6.2zm0 5.3A2.2 2.2 0 1 1 8 8a2.2 2.2 0 0 1 0 2.2z" fill="#FFF"/>
+                                    <circle cx="12.3" cy="3.7" r="0.7" fill="#FFF"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <center>
+  <p>&copy; 2023 Milano Mb. All rights
+    reserved.</p></center>
+        </footer>
+        
+                <script>
+            window.addEventListener('scroll', function() {
+                var header = document.querySelector('.site-header');
+                header.classList.toggle('scrolled', window.scrollY > 0);
+            });
+
+            var menuIcon = document.getElementById('menuIcon');
+            var navigation = document.getElementById('navigation');
+
+            menuIcon.addEventListener('click', function() {
+                navigation.classList.toggle('active');
+            });
+        </script>
+    </div>
+
+    <script src="dist/js/main.min.js"></script>
+</body>
+</html>
+
